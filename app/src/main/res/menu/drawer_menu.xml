@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/drawer_home"
+            android:icon="@drawable/home"
+            android:title="@string/home" />
+        <item
+            android:id="@+id/drawer_about_cu"
+            android:icon="@drawable/about_cu"
+            android:title="@string/about_cu" />
+        <item
+            android:id="@+id/drawer_theme_verse"
+            android:icon="@drawable/theme_verse"
+            android:title="@string/theme_verse" />
+        <item
+            android:id="@+id/drawer_bs_registration"
+            android:icon="@drawable/bs_register"
+            android:title="@string/bs_registration" />
+        <item
+            android:id="@+id/drawer_social_media"
+            android:icon="@drawable/social"
+            android:title="@string/cu_social_media" />
+        <item
+            android:id="@+id/drawer_forum"
+            android:icon="@drawable/forum"
+            android:title="@string/forum" />
+    </group>
+    <item android:title="@string/preferences">
+        <menu>
+            <item
+                android:id="@+id/drawer_night_mode"
+                android:icon="@drawable/night"
+                android:title="@string/dark_mode" />
+            <item
+                android:id="@+id/drawer_setting"
+                android:icon="@drawable/setting"
+                android:title="@string/settings"
+                android:visible="false" />
+        </menu>
+    </item>
+    <item android:title="@string/communicate">
+        <menu>
+            <item
+                android:id="@+id/drawer_help"
+                android:icon="@drawable/help"
+                android:title="@string/help"
+                android:visible="false" />
+            <item
+                android:id="@+id/drawer_feed_back"
+                android:icon="@drawable/feedback"
+                android:title="@string/share_feedback" />
+            <item
+                android:id="@+id/drawer_share_app"
+                android:icon="@drawable/share"
+                android:title="@string/share" />
+        </menu>
+    </item>
+</menu>

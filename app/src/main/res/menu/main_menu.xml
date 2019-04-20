@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/today_program"
+        android:icon="@drawable/today"
+        android:title="@string/today_program"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/dark_mode"
+        android:icon="@drawable/night"
+        android:title="@string/dark_mode" />
+    <item
+        android:id="@+id/app_setting"
+        android:icon="@drawable/setting"
+        android:title="@string/settings" />
+
+    <item
+        android:id="@+id/help"
+        android:icon="@drawable/help"
+        android:title="@string/help" />
+
+</menu>
