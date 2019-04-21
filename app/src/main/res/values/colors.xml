@@ -6,6 +6,6 @@
     <color name="colorAccent">#ff9100</color>
     <color name="secondaryTextColor">#FFFFFF</color>
     <color name="secondaryLightColor">#ffc246</color>
-    <color name="secondaryDarkColor">#c56200</color>
+    <color name="secondaryDarkColor">#E64A19</color>
     <color name="primaryTextColor">#000000</color>
 </resources>

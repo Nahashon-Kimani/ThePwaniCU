@@ -84,7 +84,7 @@
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         app:itemIconTint="@color/colorAccent"
-        app:layout_behavior="@string/bottom_sheet_behavior"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
         app:menu="@menu/next_previous" />
 
 </android.support.design.widget.CoordinatorLayout>

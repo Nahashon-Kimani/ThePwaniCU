@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="2dp"
+    android:layout_marginTop="4dp"
     app:cardCornerRadius="4dp"
     app:cardElevation="4dp">
 
@@ -35,7 +35,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/p_img"
-            android:minLines="5"
+            android:maxLines="7"
             android:text="@string/about_cu_desc" />
 
         <LinearLayout
@@ -58,6 +58,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/p_date"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -69,6 +70,7 @@
                 android:textStyle="bold" />
 
             <ImageView
+                android:id="@+id/p_share"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"

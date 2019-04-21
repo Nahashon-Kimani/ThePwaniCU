@@ -18,14 +18,11 @@ import com.google.firebase.database.ValueEventListener;
 import com.pk.R;
 import com.pk.model.TodayModel;
 
-import java.text.DateFormat;
-import java.util.Date;
-
 public class Today extends Fragment {
     View view;
     FirebaseDatabase mDatabase;
     DatabaseReference mRef;
-    TextView todayDate, todayVerse, todayNarration, todayThoght, todayPrayer;
+    TextView todayDate, todayVerse, todayNarration, todayThoght, todayPrayer, specialAnnouncement;
 
     public Today() {
     }
@@ -39,28 +36,30 @@ public class Today extends Fragment {
         mDatabase = FirebaseDatabase.getInstance();
         mRef = mDatabase.getReference().child("New").child("Today Sermon");
 
-        //Textview init
+        //TextView init
         todayDate = view.findViewById(R.id.t_date);
         todayVerse = view.findViewById(R.id.t_verse);
         todayNarration = view.findViewById(R.id.t_narration);
         todayThoght = view.findViewById(R.id.t_thought);
         todayPrayer = view.findViewById(R.id.t_prayer);
+        specialAnnouncement = view.findViewById(R.id.t_special_announce);
 
-        String currentDate = DateFormat.getDateInstance().format(new Date());
-        String desc = getResources().getString(R.string.about_cu_desc);
+        specialAnnouncement.setSelected(true);//making text in this textview marquee
 
-        final TodayModel todayModel = new TodayModel(currentDate, "James 3:17", desc, desc, desc);
-        mRef.push().setValue(todayModel);
+        //String currentDate = DateFormat.getDateInstance().format(new Date());
+
 
         mRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                TodayModel todayModel1 = dataSnapshot.getValue(TodayModel.class);
-                todayDate.setText(todayModel1.gettDate());
-                todayVerse.setText(todayModel1.gettDayVerse());
-                todayNarration.setText(todayModel1.gettVerseNarration());
-                todayThoght.setText(todayModel1.gettThoughtOfDay());
-                todayPrayer.setText(todayModel1.gettPrayerOfDay());
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    TodayModel todayModel = snapshot.getValue(TodayModel.class);
+                    todayDate.setText(todayModel.gettDate());
+                    todayVerse.setText(todayModel.gettDayVerse());
+                    todayNarration.setText(todayModel.gettVerseNarration());
+                    todayThoght.setText(todayModel.gettThoughtOfDay());
+                    todayPrayer.setText(todayModel.gettPrayerOfDay());
+                }
             }
 
             @Override

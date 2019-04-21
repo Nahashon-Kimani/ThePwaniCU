@@ -12,12 +12,20 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.pk.R;
+import com.pk.model.ThemeVerseModel;
 
 public class ThemeVerse extends Fragment {
     View view;
     TextView themeVerse, themeNarration, themeYear, themeSemName, themeVersion;
     BottomNavigationView navigationView;
+    FirebaseDatabase mDatabase;
+    DatabaseReference mRef;
 
     public ThemeVerse() {
     }
@@ -27,12 +35,41 @@ public class ThemeVerse extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.theme_verse_fragment, container, false);
 
+        //database init
+        mDatabase = FirebaseDatabase.getInstance();
+        mRef = mDatabase.getReference("New").child("Theme Verse");
+
+        //TextView INIT
         themeVerse = view.findViewById(R.id.theme_verse);
         themeNarration = view.findViewById(R.id.theme_narration);
         themeYear = view.findViewById(R.id.theme_year);
         themeSemName = view.findViewById(R.id.theme_sem_name);
         themeVersion = view.findViewById(R.id.theme_version);
         navigationView = view.findViewById(R.id.theme_next_previous);
+
+
+        ThemeVerseModel themeVerseModel = new ThemeVerseModel("James 3:17", getResources().getString(R.string.verse),
+                "Semester 2", "Year 2019", "Version: NIV");
+        mRef.push().setValue(themeVerseModel);
+
+        mRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    ThemeVerseModel verseModel = snapshot.getValue(ThemeVerseModel.class);
+                    themeVerse.setText(verseModel.getVerse());
+                    themeNarration.setText(verseModel.getNarration());
+                    themeYear.setText(verseModel.getYear());
+                    themeSemName.setText(verseModel.getSemester());
+                    themeVersion.setText(verseModel.getVersion());
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
 
         navigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override

@@ -13,6 +13,7 @@
         app:tabIndicatorColor="@color/colorAccent"
         app:tabMode="fixed"
         app:tabRippleColor="@color/colorAccent"
+        app:tabGravity="fill"
         app:tabSelectedTextColor="@color/secondaryTextColor"
         app:tabTextColor="@color/primaryTextColor" />
 

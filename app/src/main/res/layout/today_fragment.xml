@@ -1,85 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_above="@+id/t_special_announce">
 
-        <TextView
-            android:id="@+id/t_special_announce"
+        <LinearLayout
+            android:id="@+id/t_linear"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ellipsize="marquee"
-            android:text="@string/special_announcement"
-            android:textSize="17sp" />
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/t_date"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:gravity="center"
-            android:text="@string/event_date_sharing"
-            android:textColor="@color/colorAccent"
-            android:textSize="18sp" />
+            <TextView
+                android:id="@+id/t_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:text="@string/event_date_sharing"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/t_verse"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="4dp"
-            android:text="@string/semester_verse"
-            android:textAllCaps="true"
-            android:textSize="22sp"
-            android:textStyle="bold" />
+            <TextView
+                android:id="@+id/t_verse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/semester_verse"
+                android:textAllCaps="true"
+                android:textSize="22sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/t_narration"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/about_cu_desc" />
+            <TextView
+                android:id="@+id/t_narration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/about_cu_desc" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/thought_of_day"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/thought_of_day"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:background="@color/colorAccent" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorAccent" />
 
 
-        <TextView
-            android:id="@+id/t_thought"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/about_cu_desc" />
+            <TextView
+                android:id="@+id/t_thought"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/about_cu_desc" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/prayer_of_the_day"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/prayer_of_the_day"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:background="@color/colorAccent" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorAccent" />
 
-        <TextView
-            android:id="@+id/t_prayer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/about_cu_desc" />
-    </LinearLayout>
-</ScrollView>
+            <TextView
+                android:id="@+id/t_prayer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/about_cu_desc" />
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/t_special_announce"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:background="@color/colorAccent"
+        android:ellipsize="marquee"
+        android:padding="6dp"
+        android:singleLine="true"
+        android:text="@string/about_cu_desc"
+        android:textColor="@color/secondaryTextColor"
+        android:textSize="20sp" />
+</RelativeLayout>
