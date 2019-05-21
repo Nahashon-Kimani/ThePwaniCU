@@ -18,11 +18,16 @@ import com.google.firebase.database.ValueEventListener;
 import com.pk.R;
 import com.pk.model.TodayModel;
 
+import java.text.DateFormat;
+import java.util.Date;
+
 public class Today extends Fragment {
     View view;
     FirebaseDatabase mDatabase;
     DatabaseReference mRef;
     TextView todayDate, todayVerse, todayNarration, todayThoght, todayPrayer, specialAnnouncement;
+    String datee;
+    String announcement;
 
     public Today() {
     }
@@ -45,16 +50,46 @@ public class Today extends Fragment {
         specialAnnouncement = view.findViewById(R.id.t_special_announce);
 
         specialAnnouncement.setSelected(true);//making text in this textview marquee
+        populateTodaySermon();//This method sets Today's Sermon;
 
+        return view;
+    }
+
+    /*public void populateSpecialNotice() {
+        FirebaseDatabase.getInstance().getReference().child("New").child("Special Notice")
+                .addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        //Here we set text in-case of special announcement;
+                        for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                            SpecialNotice specialNotice = snapshot.getValue(SpecialNotice.class);
+                            announcement = specialNotice.getMessage().trim();
+                            if (announcement.length() > 0) {
+                                announcement = announcement + ": by " + specialNotice.getSender();
+                                specialAnnouncement.setText(announcement);
+                            } else {
+                                specialAnnouncement.setVisibility(View.GONE);
+                            }
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+    }*/
+
+    public void populateTodaySermon() {
         //String currentDate = DateFormat.getDateInstance().format(new Date());
-
 
         mRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     TodayModel todayModel = snapshot.getValue(TodayModel.class);
-                    todayDate.setText(todayModel.gettDate());
+                    datee = todayModel.gettDate() + " Sharing";
+                    todayDate.setText(datee);
                     todayVerse.setText(todayModel.gettDayVerse());
                     todayNarration.setText(todayModel.gettVerseNarration());
                     todayThoght.setText(todayModel.gettThoughtOfDay());
@@ -64,11 +99,22 @@ public class Today extends Fragment {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(getContext(), "An Error Occurred" + databaseError.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Please connect to the internet", Toast.LENGTH_SHORT).show();
+                datee = DateFormat.getDateInstance().format(new Date());
+                datee = datee + " Sharing";
+                todayDate.setText(datee);
+                todayVerse.setText(getResources().getString(R.string.semester_verse));
+                todayNarration.setText(getResources().getString(R.string.verse));
+                todayThoght.setText(getResources().getString(R.string.verse));//We gonna change for the users who are not connected.
+                todayPrayer.setText(getResources().getString(R.string.verse));
             }
         });
-
-
-        return view;
     }
+
+    /*@Override
+    public void onStart() {
+        super.onStart();
+        populateSpecialNotice();
+    }*/
+
 }

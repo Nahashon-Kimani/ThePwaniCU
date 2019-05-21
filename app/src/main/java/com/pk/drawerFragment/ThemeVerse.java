@@ -48,10 +48,6 @@ public class ThemeVerse extends Fragment {
         navigationView = view.findViewById(R.id.theme_next_previous);
 
 
-        ThemeVerseModel themeVerseModel = new ThemeVerseModel("James 3:17", getResources().getString(R.string.verse),
-                "Semester 2", "Year 2019", "Version: NIV");
-        mRef.push().setValue(themeVerseModel);
-
         mRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {

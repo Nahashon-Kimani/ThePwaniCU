@@ -25,11 +25,49 @@
     <string name="fri">Friday</string>
     <string name="sat">Saturday</string>
     <string name="sun">Sunday</string>
-    <string name="program">
+    <string name="mon_program">
         1. Morning Devotion from 5a.m GS1 \n
         2. Lunch Hour prayers at 1p.m. behind Runda \n
         3. Evening Prayers at 5p.m. Behind Runda \n
         4. Night Prayers at 8p.m. in GS1.
+    </string>
+    <string name="tue_program">
+        1. Morning Devotion from 5a.m GS1 \n
+        2. Lunch Hour prayers at 1p.m. behind Runda \n
+        3. Evening Prayers at 5p.m. Behind Runda \n
+        4. Night Prayers at 8p.m. in GS1.\n
+        5. Best P Classes at GS1 8-9:00pm
+    </string>
+    <string name="wed_program">
+        1. Morning Devotion from 5a.m GS1 \n
+        2. Departmental Prayers. 1-2:00pm\n
+        3. Evening Prayers at 5p.m. Behind Runda \n
+        4. Night Prayers at 8p.m. in GS1.
+    </string>
+    <string name="thur_program">
+        1. Morning Devotion from 5a.m GS1 \n
+        2. Lunch Hour prayers at 1p.m. behind Runda \n
+        3. Evening Prayers at 5p.m. Behind Runda \n
+        4. Night Prayers at 8p.m. in GS1.\n
+        5. Praise and Worship 8-10:00pm.
+    </string>
+    <string name="fri_program">
+        1. Morning Devotion from 5a.m GS1 \n
+        2. Lunch Hour prayers at 1p.m. behind Runda \n
+        3. Evening Prayers at 5p.m. Behind Runda \n
+        4. Service 8:00pm- 10:00pm
+    </string>
+    <string name="sat_program">
+        1. Choir Practices 2:00pm-4:00p.m.\n
+        2. Praise and Worship 4:00p.m - 6:00pm.\n
+        3. Bible Study 8pm - 9:00pm
+    </string>
+    <string name="sun_program">
+        1. Morning Devotion from 5:30a.m-6:30 LTN \n
+        2. First Service 6:30a.m - 8:45a.m.\n
+        3. Second Service 8:45 a.m. - 10:45am\n
+        4. Third service 11:00am - 1:00p.m.\n
+        5. Intercessory Prayers at 5p.m. Behind Runda
     </string>
     <string name="about_cu_desc">
         Improved communication. Groups can collaborate and communicate readily with ,Web-based tools.
@@ -60,4 +98,34 @@
     <string name="special_announcement">Special Announcement</string>
     <string name="verse">But the wisdom that comes from heaven is first of all pure; then peace-loving
                         , considerate, submissive, full of mercy and good fruit, impartial and sincere.</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="name">Full Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="register">Register</string>
+    <string name="register_here">No account? Register here</string>
+    <string name="enter_text_here">Enter Text here</string>
+    <string name="send_message">Send Message</string>
+    <string name="sender">Sender</string>
+    <string name="time">Time</string>
+    <string name="logout">Logout</string>
+    <string name="personal_profile">Personal Profile</string>
+    <string name="pucu">Pwani University Christian Union</string>
+    <string name="mission"><u> model of Godly Transformation to Church and society</u></string>
+    <string name="why_today"><b>Today</b>\n Developed for personal devotion. Each day, while online you can view
+                                a daily devotion to nourish your Spiritual Being. </string>
+    <string name="why_notices"><b>Notices</b>\n Developed for personal devotion. Each day, while online you can view
+                                a daily devotion to nourish your Spiritual Being. </string>
+    <string name="why_sem_program"><b>Semester Program</b>\n Developed for personal devotion. Each day, while online you can view
+                                a daily devotion to nourish your Spiritual Being. </string>
+    <string name="why_about_cu"><b>About CU</b>\n Developed for personal devotion. Each day, while online you can view
+                                a daily devotion to nourish your Spiritual Being. </string>
+    <string name="why_theme_verse"><b>Theme Verse</b>\n Developed for personal devotion. Each day, while online you can view
+                                a daily devotion to nourish your Spiritual Being. </string>
+    <string name="why_bs_registration"><b>Bible Study Registration</b>\n Developed for personal devotion. Each day, while online you can view
+                                a daily devotion to nourish your Spiritual Being. </string>
+    <string name="why_about"><b>About CU</b>\n Developed for personal devotion. Each day, while online you can view
+                                a daily devotion to nourish your Spiritual Being. </string>
+    <string name="why_forum"><b>Today</b>\n Developed for personal devotion. Each day, while online you can view
+                                a daily devotion to nourish your Spiritual Being. </string>
 </resources>

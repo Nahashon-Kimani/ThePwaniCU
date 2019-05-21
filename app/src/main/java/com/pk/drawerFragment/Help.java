@@ -13,7 +13,6 @@ import com.pk.R;
 public class Help extends Fragment {
     public Help() {
     }
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

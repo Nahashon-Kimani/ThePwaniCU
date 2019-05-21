@@ -49,6 +49,8 @@ public class NoticeRecyclerAdapter extends RecyclerView.Adapter<NoticeRecyclerAd
                 v.getContext().startActivity(Intent.createChooser(intent, "Share about " + noticeList.get(i).getNoticeTitle()));
             }
         });
+
+        //Checking the date and automatically deleting past event.
     }
 
     @Override

@@ -32,31 +32,31 @@ public class BottomSheetDialog extends BottomSheetDialogFragment {
         switch (dayOfWeek) {
             case Calendar.SUNDAY:
                 bottomDay.setText(getResources().getString(R.string.sun));
-                bottomProgram.setText(getResources().getString(R.string.program));
+                bottomProgram.setText(getResources().getString(R.string.sun_program));
                 break;
             case Calendar.MONDAY:
                 bottomDay.setText(getResources().getString(R.string.mon));
-                bottomProgram.setText(getResources().getString(R.string.program));
+                bottomProgram.setText(getResources().getString(R.string.mon_program));
                 break;
             case Calendar.TUESDAY:
                 bottomDay.setText(getResources().getString(R.string.tue));
-                bottomProgram.setText(getResources().getString(R.string.program));
+                bottomProgram.setText(getResources().getString(R.string.tue_program));
                 break;
             case Calendar.WEDNESDAY:
                 bottomDay.setText(getResources().getString(R.string.wed));
-                bottomProgram.setText(getResources().getString(R.string.program));
+                bottomProgram.setText(getResources().getString(R.string.wed_program));
                 break;
             case Calendar.THURSDAY:
                 bottomDay.setText(getResources().getString(R.string.thur));
-                bottomProgram.setText(getResources().getString(R.string.program));
+                bottomProgram.setText(getResources().getString(R.string.thur_program));
                 break;
             case Calendar.FRIDAY:
                 bottomDay.setText(getResources().getString(R.string.fri));
-                bottomProgram.setText(getResources().getString(R.string.program));
+                bottomProgram.setText(getResources().getString(R.string.fri_program));
                 break;
             case Calendar.SATURDAY:
                 bottomDay.setText(getResources().getString(R.string.sat));
-                bottomProgram.setText(getResources().getString(R.string.program));
+                bottomProgram.setText(getResources().getString(R.string.sat_program));
                 break;
         }
 

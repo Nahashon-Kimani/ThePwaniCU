@@ -68,7 +68,6 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 Snackbar snackbar = Snackbar.make(drawer, "Press back again to exit", Snackbar.LENGTH_SHORT);
                 snackbar.show();
-
                 backPressed = System.currentTimeMillis();
             }
         }

@@ -3,6 +3,7 @@ package com.pk.adapter;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,9 +14,12 @@ import android.widget.TextView;
 import com.pk.R;
 import com.pk.model.SemProgramModel;
 
+import java.text.DateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class SemProgramRecyclerAdapter extends RecyclerView.Adapter<SemProgramRecyclerAdapter.MyHolder> {
+    String today;
     Context context;
     ArrayList<SemProgramModel> programList = new ArrayList<>();
 
@@ -36,6 +40,12 @@ public class SemProgramRecyclerAdapter extends RecyclerView.Adapter<SemProgramRe
         myHolder.title.setText(programList.get(i).getpTitle());
         myHolder.desc.setText(programList.get(i).getpDesc());
         myHolder.date.setText(programList.get(i).getpDate());
+
+        today = DateFormat.getDateInstance().format(new Date());
+        if (today.equals(programList.get(i).getpDate())) {
+            myHolder.programCard.setBackgroundResource(R.color.colorPrimary);
+        }
+
         myHolder.shareProgram.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,6 +59,8 @@ public class SemProgramRecyclerAdapter extends RecyclerView.Adapter<SemProgramRe
                 v.getContext().startActivity(Intent.createChooser(intent, "Share " + programList.get(i).getpTitle()));
             }
         });
+
+
     }
 
     @Override
@@ -60,10 +72,11 @@ public class SemProgramRecyclerAdapter extends RecyclerView.Adapter<SemProgramRe
     class MyHolder extends RecyclerView.ViewHolder {
         TextView title, desc, date;
         ImageView shareProgram;
+        CardView programCard;
 
         public MyHolder(@NonNull View itemView) {
             super(itemView);
-
+            programCard = itemView.findViewById(R.id.p_card_view);
             title = itemView.findViewById(R.id.p_title);
             desc = itemView.findViewById(R.id.p_desc);
             date = itemView.findViewById(R.id.p_date);

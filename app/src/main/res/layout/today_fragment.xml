@@ -38,8 +38,7 @@
             <TextView
                 android:id="@+id/t_narration"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/about_cu_desc" />
+                android:layout_height="wrap_content" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -58,8 +57,7 @@
             <TextView
                 android:id="@+id/t_thought"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/about_cu_desc" />
+                android:layout_height="wrap_content" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -77,22 +75,7 @@
             <TextView
                 android:id="@+id/t_prayer"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/about_cu_desc" />
+                android:layout_height="wrap_content" />
         </LinearLayout>
     </ScrollView>
-
-    <TextView
-        android:id="@+id/t_special_announce"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="0dp"
-        android:background="@color/colorAccent"
-        android:ellipsize="marquee"
-        android:padding="6dp"
-        android:singleLine="true"
-        android:text="@string/about_cu_desc"
-        android:textColor="@color/secondaryTextColor"
-        android:textSize="20sp" />
 </RelativeLayout>
