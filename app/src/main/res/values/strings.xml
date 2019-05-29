@@ -77,7 +77,7 @@
         In addition, the productivity of staff support (such as financial and legal analysts) may be increased.
         Productivity may also be increased by using optimization tools that determine the best way to run a business.
 </string>
-    <string name="read_more">Read More</string>
+    <string name="read_more">Read More…</string>
     <string name="previous">Previous</string>
     <string name="next">Next</string>
     <string name="semester_name">Semester 2</string>
@@ -112,20 +112,45 @@
     <string name="personal_profile">Personal Profile</string>
     <string name="pucu">Pwani University Christian Union</string>
     <string name="mission"><u> model of Godly Transformation to Church and society</u></string>
-    <string name="why_today"><b>Today</b>\n Developed for personal devotion. Each day, while online you can view
-                                a daily devotion to nourish your Spiritual Being. </string>
-    <string name="why_notices"><b>Notices</b>\n Developed for personal devotion. Each day, while online you can view
-                                a daily devotion to nourish your Spiritual Being. </string>
-    <string name="why_sem_program"><b>Semester Program</b>\n Developed for personal devotion. Each day, while online you can view
-                                a daily devotion to nourish your Spiritual Being. </string>
-    <string name="why_about_cu"><b>About CU</b>\n Developed for personal devotion. Each day, while online you can view
-                                a daily devotion to nourish your Spiritual Being. </string>
-    <string name="why_theme_verse"><b>Theme Verse</b>\n Developed for personal devotion. Each day, while online you can view
-                                a daily devotion to nourish your Spiritual Being. </string>
-    <string name="why_bs_registration"><b>Bible Study Registration</b>\n Developed for personal devotion. Each day, while online you can view
-                                a daily devotion to nourish your Spiritual Being. </string>
-    <string name="why_about"><b>About CU</b>\n Developed for personal devotion. Each day, while online you can view
-                                a daily devotion to nourish your Spiritual Being. </string>
-    <string name="why_forum"><b>Today</b>\n Developed for personal devotion. Each day, while online you can view
-                                a daily devotion to nourish your Spiritual Being. </string>
+    <string name="why_today"> </string>
+    <string name="why_notices"> </string>
+    <string name="facebook">FACEBOOK</string>
+    <string name="save_call">Do you want to Save Contact or Call Pwani University Christian Union Directly?</string>
+    <string name="save_or">Save the contact First to text Pwani Pwani University Christian Union in WhatsApp.</string>
+    <string name="save">SAVE</string>
+    <string name="call">Call</string>
+    <string-array name="help_me">
+        <item><b>Today</b>\n Developed for personal devotion. Each day, while online you can view
+                                a daily devotion to nourish your Spiritual Being.</item>
+        <item><b>Notices</b>\n Developed for personal devotion. Each day, while online you can view
+                                a daily devotion to nourish your Spiritual Being.</item>
+        <item><b>Semester Program</b>\n Developed for personal devotion. Each day, while online you can view
+                                a daily devotion to nourish your Spiritual Being. </item>
+        <item><b>About CU</b>\n Developed for personal devotion. Each day, while online you can view
+                                a daily devotion to nourish your Spiritual Being. </item>
+        <item><b>Theme Verse</b>\n Developed for personal devotion.Each day, while online you can view
+                                a daily devotion to nourish your Spiritual Being.</item>
+        <item><b>Bible Study Registration</b>\n Developed for personal devotion. Each day, while online you can view
+                                a daily devotion to nourish your Spiritual Being. </item>
+        <item><b>About CU</b>\n Developed for personal devotion. Each day, while online you can view
+                                a daily devotion to nourish your Spiritual Being. </item>
+        <item><b>Today</b>\n Developed for personal devotion. Each day, while online you can view
+                                a daily devotion to nourish your Spiritual Being. </item>
+    </string-array>
+    <string-array name="media_name">
+        <item>Telephone Number</item>
+        <item>FaceBook</item>
+        <item>WhatsApp</item>
+        <item>Twitter</item>
+        <item>Instagram</item>
+        <item>Youtube</item>
+    </string-array>
+    <string-array name="media_account">
+        <item>0743304418</item>
+        <item>Official Pwani University CU</item>
+        <item>0743304418</item>
+        <item>\@pwanicu</item>
+        <item>Official Pwani University CU</item>
+        <item>Pwani University Christian Union</item>
+    </string-array>
 </resources>

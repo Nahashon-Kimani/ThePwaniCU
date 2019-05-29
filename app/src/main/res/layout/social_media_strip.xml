@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/social_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/social_image"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/cu_social_media"
+                android:src="@drawable/fb" />
+
+            <TextView
+                android:id="@+id/social_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/social_image"
+                android:gravity="center"
+                android:text="@string/facebook"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/social_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/social_name"
+                android:layout_marginTop="16dp"
+                android:gravity="bottom|center"
+                android:text="@string/cu_mail"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/social_view"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_below="@+id/social_account"
+                android:background="@color/colorAccent" />
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>

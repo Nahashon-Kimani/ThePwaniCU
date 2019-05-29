@@ -29,13 +29,15 @@
             android:icon="@drawable/forum"
             android:title="@string/forum" />
     </group>
-    <item android:title="@string/preferences">
+    <item
+        android:title="@string/preferences"
+        android:visible="false">
         <menu>
             <item
                 android:id="@+id/drawer_night_mode"
                 android:icon="@drawable/night"
-                android:visible="false"
-                android:title="@string/dark_mode" />
+                android:title="@string/dark_mode"
+                android:visible="false" />
             <item
                 android:id="@+id/drawer_setting"
                 android:icon="@drawable/setting"

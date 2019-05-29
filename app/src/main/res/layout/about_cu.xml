@@ -49,6 +49,7 @@
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@android:color/darker_gray"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <LinearLayout
@@ -60,6 +61,11 @@
                 android:id="@+id/about_cu_text_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginRight="6dp"
+                android:background="@color/secondaryTextColor"
                 android:ellipsize="end"
                 android:gravity="start"
                 android:lineSpacingExtra="4dp"
@@ -73,6 +79,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
+                android:layout_marginTop="4dp"
+                android:background="@color/secondaryTextColor"
                 android:text="@string/read_more" />
 
         </LinearLayout>

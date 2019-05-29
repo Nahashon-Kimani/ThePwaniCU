@@ -33,7 +33,7 @@ public class ThemeVerse extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.theme_verse_fragment, container, false);
+        view = inflater.inflate(R.layout.theme_verse_strip, container, false);
 
         //database init
         mDatabase = FirebaseDatabase.getInstance();

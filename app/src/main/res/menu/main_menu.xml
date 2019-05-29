@@ -2,17 +2,28 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+
+    <item
+        android:id="@+id/special_me"
+        android:icon="@drawable/announce"
+        android:title="@string/special_announcement"
+        app:showAsAction="always" />
+
     <item
         android:id="@+id/today_program"
         android:icon="@drawable/today"
         android:title="@string/today_program"
         app:showAsAction="always" />
+
+
     <item
         android:id="@+id/dark_mode"
         android:icon="@drawable/night"
+        android:visible="false"
         android:title="@string/dark_mode" />
     <item
         android:id="@+id/app_setting"
+        android:visible="false"
         android:icon="@drawable/setting"
         android:title="@string/settings" />
 

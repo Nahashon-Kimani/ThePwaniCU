@@ -25,7 +25,7 @@ public class Today extends Fragment {
     View view;
     FirebaseDatabase mDatabase;
     DatabaseReference mRef;
-    TextView todayDate, todayVerse, todayNarration, todayThoght, todayPrayer, specialAnnouncement;
+    TextView todayDate, todayVerse, todayNarration, todayThoght, todayPrayer;
     String datee;
     String announcement;
 
@@ -47,38 +47,14 @@ public class Today extends Fragment {
         todayNarration = view.findViewById(R.id.t_narration);
         todayThoght = view.findViewById(R.id.t_thought);
         todayPrayer = view.findViewById(R.id.t_prayer);
-        specialAnnouncement = view.findViewById(R.id.t_special_announce);
 
-        specialAnnouncement.setSelected(true);//making text in this textview marquee
+        //specialAnnouncement.setSelected(true);//making text in this textview marquee
         populateTodaySermon();//This method sets Today's Sermon;
 
         return view;
     }
 
-    /*public void populateSpecialNotice() {
-        FirebaseDatabase.getInstance().getReference().child("New").child("Special Notice")
-                .addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        //Here we set text in-case of special announcement;
-                        for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                            SpecialNotice specialNotice = snapshot.getValue(SpecialNotice.class);
-                            announcement = specialNotice.getMessage().trim();
-                            if (announcement.length() > 0) {
-                                announcement = announcement + ": by " + specialNotice.getSender();
-                                specialAnnouncement.setText(announcement);
-                            } else {
-                                specialAnnouncement.setVisibility(View.GONE);
-                            }
-                        }
-                    }
 
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                    }
-                });
-    }*/
 
     public void populateTodaySermon() {
         //String currentDate = DateFormat.getDateInstance().format(new Date());

@@ -7,24 +7,10 @@
     android:paddingBottom="8dp">
 
     <TextView
-        android:id="@+id/t_special_announce"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="0dp"
-        android:background="@color/colorAccent"
-        android:ellipsize="marquee"
-        android:hint="@string/about_cu_desc"
-        android:padding="6dp"
-        android:singleLine="true"
-        android:textColor="@color/secondaryTextColor"
-        android:textSize="20sp" />
-
-
-    <TextView
         android:id="@+id/bottom_day"
         android:layout_width="match_parent"
-        android:layout_marginTop="2dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
         android:background="@color/colorPrimary"
         android:gravity="center"
         android:padding="8dp"

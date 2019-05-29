@@ -8,4 +8,12 @@
     <color name="secondaryLightColor">#ffc246</color>
     <color name="secondaryDarkColor">#E64A19</color>
     <color name="primaryTextColor">#000000</color>
+
+    <!--social media view color-->
+    <color name="dial_color">#5AB989</color>
+    <color name="fb_color">#0000FF</color>
+    <color name="whatsApp_color">#43A047</color>
+    <color name="twitter_color">#1e88e5</color>
+    <color name="instagram_color">#DDFFAB40</color>
+    <color name="youtube_color">#FF3B29</color>
 </resources>

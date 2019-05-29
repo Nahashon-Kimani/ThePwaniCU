@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_relative"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/save_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dialog_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/save_bg"
+        android:drawableStart="@drawable/error"
+        android:drawableLeft="@drawable/error"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:hint="@string/save_call"
+        android:paddingBottom="40dp"
+        android:textSize="18sp"
+        android:typeface="monospace" />
+
+
+    <LinearLayout
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dialog_message"
+        android:layout_marginBottom="20dp"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/dialog_save"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight=".5"
+            android:background="@drawable/save_bg"
+            android:drawableStart="@drawable/save"
+            android:drawableLeft="@drawable/save"
+            android:padding="10dp"
+            android:text="@string/save"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/dialog_dial"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_weight=".5"
+            android:background="@drawable/call_bg"
+            android:drawableStart="@drawable/call"
+            android:drawableLeft="@drawable/call"
+            android:padding="10dp"
+            android:text="@string/call"
+            android:textColor="@color/dial_color"
+            android:textSize="20sp" />
+    </LinearLayout>
+</RelativeLayout>

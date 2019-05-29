@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import com.pk.activity.Forum;
 import com.pk.adapter.BottomSheetDialog;
+import com.pk.adapter.SpecialNoticeBottomsheet;
 import com.pk.drawerFragment.AboutCU;
 import com.pk.drawerFragment.BsRegistration;
 import com.pk.drawerFragment.CuSocialMedia;
@@ -88,13 +89,16 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.today_program:
                 //This should show a bottom sheet with today program
-                openBottomSheet();
+                openTodayProgramBottomSheet();
                 break;
             case R.id.help:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Help()).commit();
                 break;
             case R.id.dark_mode:
                 Toast.makeText(MainActivity.this, "Under Development", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.special_me:
+                openSpecialNoticeBottomSheet();
                 break;
         }
         return true;
@@ -165,9 +169,14 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void openBottomSheet() {
+    public void openTodayProgramBottomSheet() {
         BottomSheetDialog bottomSheetDialog = new BottomSheetDialog();
         bottomSheetDialog.show(getSupportFragmentManager(), "OPEN BOTTOM SHEET");
+    }
+
+    public void openSpecialNoticeBottomSheet() {
+        SpecialNoticeBottomsheet bottomsheet = new SpecialNoticeBottomsheet();
+        bottomsheet.show(getSupportFragmentManager(), "OPEN BOTTOM SHEET");
     }
 
 }
