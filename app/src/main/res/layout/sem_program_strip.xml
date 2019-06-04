@@ -37,6 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/p_img"
             android:maxLines="7"
+            android:ellipsize="end"
             android:text="@string/about_cu_desc" />
 
         <LinearLayout

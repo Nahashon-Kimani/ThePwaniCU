@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -32,7 +33,7 @@ public class NoticeRecyclerAdapter extends RecyclerView.Adapter<NoticeRecyclerAd
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyHolder myHolder, final int i) {
+    public void onBindViewHolder(@NonNull final MyHolder myHolder, final int i) {
         myHolder.nTitle.setText(noticeList.get(i).getNoticeTitle());
         myHolder.nDesc.setText(noticeList.get(i).getNoticeDesc());
         myHolder.nDate.setText(noticeList.get(i).getNoticeDate());

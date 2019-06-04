@@ -61,7 +61,7 @@ public class AboutCU extends Fragment {
     }
 
     public void openCUWebsite() {
-        Uri uri = Uri.parse("https://www.google.com");
+        Uri uri = Uri.parse("https://pucu.co.ke");
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
     }

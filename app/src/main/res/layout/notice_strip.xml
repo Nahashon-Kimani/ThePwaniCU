@@ -3,15 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="4dp"
+    android:layout_marginTop="2dp"
     app:cardCornerRadius="4dp"
     app:cardElevation="4dp"
     app:cardMaxElevation="4dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:background="@drawable/b3">
+        android:layout_height="260dp"
+        android:background="@drawable/b3"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
 
 
         <ImageView
@@ -29,11 +31,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/share_event"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="68dp"
             android:gravity="start"
             android:padding="4dp"
             android:text="@string/event_name"
-            android:textColor="@color/secondaryTextColor"
+            android:textColor="@color/primaryTextColor"
             android:textSize="22sp"
             android:textStyle="bold" />
 
@@ -43,13 +45,17 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/event_name"
             android:ellipsize="end"
-            android:maxLines="4"
-            android:text="@string/about_cu_desc" />
+            android:fontFamily="monospace"
+            android:maxLines="5"
+            android:text="@string/verse"
+            android:textColor="@color/secondaryTextColor"
+            android:textSize="16sp" />
 
         <LinearLayout
             android:id="@+id/date_location"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
             android:layout_alignParentBottom="true"
             android:orientation="horizontal"
             android:weightSum="1">
@@ -58,27 +64,29 @@
                 android:id="@+id/event_date"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight=".5"
+                android:layout_weight=".6"
                 android:drawableStart="@drawable/ic_date"
                 android:drawableLeft="@drawable/ic_date"
                 android:drawablePadding="2dp"
                 android:gravity="start"
+                android:textStyle="bold"
                 android:text="@string/event_date"
-                android:textColor="@color/secondaryTextColor"
+                android:textColor="@color/primaryTextColor"
                 android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/event_category"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight=".5"
-                android:drawableStart="@drawable/ic_event"
-                android:drawableLeft="@drawable/ic_event"
+                android:layout_weight=".4"
+                android:drawableEnd="@drawable/ic_event"
+                android:drawableRight="@drawable/ic_event"
                 android:drawablePadding="2dp"
                 android:gravity="end"
                 android:text="@string/event_category"
                 android:textColor="@color/secondaryDarkColor"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
