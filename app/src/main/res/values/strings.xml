@@ -70,19 +70,29 @@
         5. Intercessory Prayers at 5p.m. Behind Runda
     </string>
     <string name="about_cu_desc">
-        Pwani University Christian Union is a body of Christian students from Pwani University bound 
-		together by a common faith in the only God and joined together with the heavenly calling of 
-		Christ according to the Holy Scriptures. Our doctrinal basis as the Christian body is the 
-		fundamental truth about Christianity and we believe in the unity of the Father, the Son, 
-		and the Holy Spirit in the Godhead, the Sovereignty of God in the creation, revelation, 
-		redemption, and final judgment and the divine inspiration and entire truthfulness of the 
-		Holy Scriptures originally given and its supreme authority in all matters of faith and conduct.
-		We engage in evangelism, open air crusades and outreach missions and ministries as a 
-		fulfillment of the great commission the main purpose of them all being able to reach as many 
-		believers as possible.Through our daily and weekly activities such as fellowships and bible 
-		study as the Christian Organization we are able to form healthy relationships entailing 
-		discipleship, mentor-ship, academic assistance and prayer partners e.g. through fasting. 
-		Our aims and objectives as the Christian body within larger Pwani University main campus include:…
+        The Pwani University Christian Union is a body bound by oe faith in God, the unity based
+		on common belief in the LORD JESUS as saviour and living as the Holy Scriptures say. The CU 
+		shall be entirely non-political and non-profit. 
+		Objectives\n
+		1. <b>Evangelism</b>\n To present JESUS CHRIST as Saviour, LORD and God to students in the 
+		University with purpose of leading them to a personal faith in Him.\n
+		2. <b>Discipleship</b> \n To deepen and strengthen spiritual life of students and equip them 
+		for a life time of Service in the family, church and society.\n
+		3. <b>Mission</b>\n To encourage and equip students to take the good news of Christ to every nation
+		on Earth and to be part of the church\'s witness to the good news, in order to be salt and Light
+		in the World.\n
+		4. <b>Leadership Development</b>\n To develop Christian Leaders who will play key roles while 
+		in campus, in church and wider society.\n\n\n
+		
+		<b>STATEMENT OF FAITH</b>\n
+		1. The unity of the Father, Son and the Holy Spirit in God head.\n
+		2. The Sovereignty of God in Creation, revolution, redemption and final judgement. \n
+		3. The divined inspiration and entire trustworthiness of Holy Scripture, as originally
+		given and its supreme authority in all matters of faith and conduct.\n
+		4. The universal sinfulness and guilty of all men since  the fall, rendering them subject
+		to God\'s wrath and condemnation.\n
+		5. Redemption from the guilt, penalty, dominion and pollution of solely through the sacrificial death
+		\(Our Representative and substitution\) of the; LORD JESUS from the dead and His ascension to the right hand
 </string>
     <string name="read_more">Read More…</string>
     <string name="previous">Previous</string>
@@ -146,6 +156,7 @@
     </string-array>
     <string-array name="media_name">
         <item>Telephone Number</item>
+        <item>Email</item>
         <item>FaceBook</item>
         <item>WhatsApp</item>
         <item>Twitter</item>
@@ -154,6 +165,7 @@
     </string-array>
     <string-array name="media_account">
         <item>0743304418</item>
+        <item>pucusecretary@gmail.com</item>
         <item>Official Pwani University CU</item>
         <item>0743304418</item>
         <item>\@pwanicu</item>

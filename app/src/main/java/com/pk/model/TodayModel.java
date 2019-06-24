@@ -1,7 +1,7 @@
 package com.pk.model;
 
 public class TodayModel {
-    private String tDate, tDayVerse, tVerseNarration, tThoughtOfDay, tPrayerOfDay;
+     String tDate, tDayVerse, tVerseNarration, tThoughtOfDay, tPrayerOfDay;
 
     public TodayModel() {
     }

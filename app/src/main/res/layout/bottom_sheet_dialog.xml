@@ -19,7 +19,7 @@
         android:textSize="24sp"
         android:textStyle="bold" />
 
-    <TextView
+    <com.codesgood.views.JustifiedTextView
         android:id="@+id/bottom_program"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

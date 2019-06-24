@@ -29,6 +29,7 @@ import com.pk.model.ChatModel;
 
 import java.text.DateFormat;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 
 public class Forum extends AppCompatActivity {
@@ -105,6 +106,7 @@ public class Forum extends AppCompatActivity {
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     chatList.add(snapshot.getValue(ChatModel.class));
                 }
+                //Collections.reverse(chatList);
                 LinearLayoutManager manager = new LinearLayoutManager(Forum.this);
                 manager.setOrientation(LinearLayoutManager.VERTICAL);
                 fRecyclerView.setLayoutManager(manager);

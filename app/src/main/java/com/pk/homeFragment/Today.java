@@ -4,11 +4,11 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -16,18 +16,18 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.pk.R;
+import com.pk.adapter.TodayRecyclerAdapter;
 import com.pk.model.TodayModel;
 
-import java.text.DateFormat;
-import java.util.Date;
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class Today extends Fragment {
     View view;
+    RecyclerView recyclerView;
     FirebaseDatabase mDatabase;
     DatabaseReference mRef;
-    TextView todayDate, todayVerse, todayNarration, todayThoght, todayPrayer;
-    String datee;
-    String announcement;
+    ArrayList<TodayModel> programModelArrayList = new ArrayList<>();
 
     public Today() {
     }
@@ -35,62 +35,37 @@ public class Today extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.today_fragment, container, false);
+        view = inflater.inflate(R.layout.recycler_view_layout, container, false);
+        recyclerView = view.findViewById(R.id.recycler_view);
 
-        //Database init
+        //Database INIT
         mDatabase = FirebaseDatabase.getInstance();
         mRef = mDatabase.getReference().child("New").child("Today Sermon");
 
-        //TextView init
-        todayDate = view.findViewById(R.id.t_date);
-        todayVerse = view.findViewById(R.id.t_verse);
-        todayNarration = view.findViewById(R.id.t_narration);
-        todayThoght = view.findViewById(R.id.t_thought);
-        todayPrayer = view.findViewById(R.id.t_prayer);
+        //String eventInputDate = DateFormat.getDateTimeInstance().format(new Date());
 
-        //specialAnnouncement.setSelected(true);//making text in this textview marquee
-        populateTodaySermon();//This method sets Today's Sermon;
-
-        return view;
-    }
-
-
-
-    public void populateTodaySermon() {
-        //String currentDate = DateFormat.getDateInstance().format(new Date());
 
         mRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    TodayModel todayModel = snapshot.getValue(TodayModel.class);
-                    datee = todayModel.gettDate() + " Sharing";
-                    todayDate.setText(datee);
-                    todayVerse.setText(todayModel.gettDayVerse());
-                    todayNarration.setText(todayModel.gettVerseNarration());
-                    todayThoght.setText(todayModel.gettThoughtOfDay());
-                    todayPrayer.setText(todayModel.gettPrayerOfDay());
+                    programModelArrayList.add(snapshot.getValue(TodayModel.class));
                 }
+                Collections.reverse(programModelArrayList);
+                LinearLayoutManager manager = new LinearLayoutManager(getActivity());
+                manager.setOrientation(1);
+               /* manager.setReverseLayout(true);
+                manager.setStackFromEnd(true);*/
+                recyclerView.setLayoutManager(manager);
+                recyclerView.setAdapter(new TodayRecyclerAdapter(getContext(), programModelArrayList));
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(getContext(), "Please connect to the internet", Toast.LENGTH_SHORT).show();
-                datee = DateFormat.getDateInstance().format(new Date());
-                datee = datee + " Sharing";
-                todayDate.setText(datee);
-                todayVerse.setText(getResources().getString(R.string.semester_verse));
-                todayNarration.setText(getResources().getString(R.string.verse));
-                todayThoght.setText(getResources().getString(R.string.verse));//We gonna change for the users who are not connected.
-                todayPrayer.setText(getResources().getString(R.string.verse));
+
             }
         });
+
+        return view;
     }
-
-    /*@Override
-    public void onStart() {
-        super.onStart();
-        populateSpecialNotice();
-    }*/
-
 }

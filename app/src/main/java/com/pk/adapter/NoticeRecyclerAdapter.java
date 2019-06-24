@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,6 +39,8 @@ public class NoticeRecyclerAdapter extends RecyclerView.Adapter<NoticeRecyclerAd
         myHolder.nDesc.setText(noticeList.get(i).getNoticeDesc());
         myHolder.nDate.setText(noticeList.get(i).getNoticeDate());
         myHolder.nCategory.setText(noticeList.get(i).getNoticeCategory());
+
+        myHolder.nDesc.setMovementMethod(new ScrollingMovementMethod());
 
         myHolder.shareNotice.setOnClickListener(new View.OnClickListener() {
             @Override

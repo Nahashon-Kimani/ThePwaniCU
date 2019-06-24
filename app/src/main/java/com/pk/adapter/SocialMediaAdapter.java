@@ -30,7 +30,7 @@ public class SocialMediaAdapter extends RecyclerView.Adapter<SocialMediaAdapter.
         this.context = context;
         name = context.getResources().getStringArray(R.array.media_name);
         account = context.getResources().getStringArray(R.array.media_account);
-        image = new int[]{R.drawable.dial, R.drawable.fb, R.drawable.whatsapp, R.drawable.twitter,
+        image = new int[]{R.drawable.dial, R.drawable.gmail, R.drawable.fb, R.drawable.whatsapp, R.drawable.twitter,
                 R.drawable.instagram, R.drawable.youtube};
 
     }
@@ -57,22 +57,25 @@ public class SocialMediaAdapter extends RecyclerView.Adapter<SocialMediaAdapter.
                 break;
             //This is Facebook
             case 1:
+                myHolder.socialView.setBackgroundResource(R.color.youtube_color);
+                break;
+            case 2:
                 myHolder.socialView.setBackgroundResource(R.color.fb_color);
                 break;
             //This is WhatsApp
-            case 2:
+            case 3:
                 myHolder.socialView.setBackgroundResource(R.color.whatsApp_color);
                 break;
             //This is Twitter
-            case 3:
+            case 4:
                 myHolder.socialView.setBackgroundResource(R.color.twitter_color);
                 break;
             //This is Instagram
-            case 4:
+            case 5:
                 myHolder.socialView.setBackgroundResource(R.color.instagram_color);
                 break;
             //This is Youtube
-            case 5:
+            case 6:
                 myHolder.socialView.setBackgroundResource(R.color.youtube_color);
                 break;
         }
@@ -123,8 +126,20 @@ public class SocialMediaAdapter extends RecyclerView.Adapter<SocialMediaAdapter.
 
                         dialog.show();
                         break;
-
                     case 1:
+                        Intent gmail = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto",
+                                "pucusecretary@gmail.com", null));
+                        gmail.putExtra(Intent.EXTRA_SUBJECT, "");
+                        gmail.putExtra(Intent.EXTRA_TEXT, "");
+                        if (gmail.resolveActivity(context.getPackageManager()) != null) {
+                            context.startActivity(Intent.createChooser(gmail, "Send Email"));
+                        } else {
+                            Toast.makeText(context, "No Email Application found. \n " +
+                                    "Please send mail via:" + account[position], Toast.LENGTH_SHORT).show();
+                        }
+                        break;
+
+                    case 2:
                         //fb
                         Toast.makeText(context, "OPENING " + name[position] + " WEBSITE." +
                                 "\n Please search " + account[position], Toast.LENGTH_LONG).show();
@@ -132,7 +147,7 @@ public class SocialMediaAdapter extends RecyclerView.Adapter<SocialMediaAdapter.
 
                         break;
 
-                    case 2:
+                    case 3:
                         //WhatsApp
 
                         final Dialog whatsAPPDialog = new Dialog(context);
@@ -173,19 +188,19 @@ public class SocialMediaAdapter extends RecyclerView.Adapter<SocialMediaAdapter.
                         v.getContext().startActivity(whatsApp);*/
                         break;
 
-                    case 3:
+                    case 4:
                         //Twitter
                         Toast.makeText(context, "OPENING" + name[position] + "WEBSITE." +
                                 "\n Please search" + account[position], Toast.LENGTH_SHORT).show();
                         openSocialMediaSites("https://www.twitter.com");
                         break;
-                    case 4:
+                    case 5:
                         //Instagram
                         Toast.makeText(context, "OPENING" + name[position] + "WEBSITE." +
                                 "\n Please search" + account[position], Toast.LENGTH_SHORT).show();
                         openSocialMediaSites("https://www.instagram.com");
                         break;
-                    case 5:
+                    case 6:
                         Toast.makeText(context, "OPENING" + name[position] + "WEBSITE." +
                                 "\n Please search" + account[position], Toast.LENGTH_SHORT).show();
                         openSocialMediaSites("https://www.youtube.com/watch?v=cVHrkYbEgFM");

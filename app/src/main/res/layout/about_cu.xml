@@ -58,7 +58,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <TextView
+            <com.codesgood.views.JustifiedTextView
                 android:id="@+id/about_cu_text_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
