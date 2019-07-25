@@ -27,7 +27,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:layout_weight=".8"
+            android:layout_weight=".85"
             android:background="@color/primaryLightColor"
             android:hint="@string/enter_text_here"
             android:inputType="textCapSentences|textMultiLine"
@@ -37,12 +37,12 @@
             android:textColorHint="@color/secondaryTextColor"
             android:textSize="16sp" />
 
-        <ImageButton
+        <ImageView
             android:id="@+id/f_send_message"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_weight=".2"
+            android:layout_height="45dp"
+            android:layout_gravity="bottom|end"
+            android:layout_weight=".15"
             android:contentDescription="@string/send_message"
             android:src="@android:drawable/ic_menu_send" />
 

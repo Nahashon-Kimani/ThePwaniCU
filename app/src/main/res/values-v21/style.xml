@@ -5,5 +5,15 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
+        <!--<item name="colorPrimary">#1e88e5</item>
+        <item name="colorPrimaryDark">005cb2</item>
+        <item name="colorAccent">ff9100</item>-->
     </style>
+
+
+    <style name="LinearProgress" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:progressBackgroundTint">@color/youtube_color</item>
+    </style>
+
 </resources>

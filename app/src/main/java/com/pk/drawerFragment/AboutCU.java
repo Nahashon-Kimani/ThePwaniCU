@@ -7,6 +7,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,6 +35,7 @@ public class AboutCU extends Fragment {
         aboutCUTextView = view.findViewById(R.id.about_cu_text_view);
         fabAbout = view.findViewById(R.id.share_about_cu);
 
+        aboutCUTextView.setMovementMethod(new ScrollingMovementMethod());
 
         fabAbout.setOnClickListener(new View.OnClickListener() {
             @Override

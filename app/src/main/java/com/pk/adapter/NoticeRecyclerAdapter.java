@@ -47,8 +47,11 @@ public class NoticeRecyclerAdapter extends RecyclerView.Adapter<NoticeRecyclerAd
             public void onClick(View v) {
                 Intent intent = new Intent();
                 intent.setAction(Intent.ACTION_SEND)
-                        .putExtra(Intent.EXTRA_TEXT, "Just a reminder of \n" + noticeList.get(i).getNoticeTitle()
-                                + "on date" + noticeList.get(i).getNoticeDate() + ".\n Please purpose t attend.");
+                        .putExtra(Intent.EXTRA_TEXT, "Hello. Just a reminder of Pwani University Christian Union, "
+                                + "on date " + noticeList.get(i).getNoticeDate()
+                                + "we will have having " + noticeList.get(i).getNoticeTitle()
+                                + ". Please purpose to attend. Thank You.\n"
+                                + "#PwaniUniversityChristianUnion");
                 intent.setType("text/plain");
                 v.getContext().startActivity(Intent.createChooser(intent, "Share about " + noticeList.get(i).getNoticeTitle()));
             }

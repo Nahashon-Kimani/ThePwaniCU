@@ -62,6 +62,7 @@
             android:id="@+id/t_thought"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:lineSpacingExtra="4dp"
             android:textSize="16sp" />
 
         <TextView
@@ -81,7 +82,7 @@
             android:id="@+id/t_prayer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/about_cu_desc"
+            android:text="@string/prayer_sample"
             android:textSize="16sp" />
     </LinearLayout>
 </ScrollView>

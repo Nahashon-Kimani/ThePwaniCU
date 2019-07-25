@@ -8,6 +8,7 @@
     <color name="secondaryLightColor">#ffc246</color>
     <color name="secondaryDarkColor">#E64A19</color>
     <color name="primaryTextColor">#000000</color>
+    <color name="send_color">#00FF00</color>
 
     <!--social media view color-->
     <color name="dial_color">#5AB989</color>

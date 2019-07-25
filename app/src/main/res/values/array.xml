@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="year_of_study">
+        <item>SELECT YEAR OF STUDY</item>
         <item>Year 1</item>
         <item>Year 2</item>
         <item>Year 3</item>

@@ -41,14 +41,15 @@ public class ChatRecyclerAdapter extends RecyclerView.Adapter<ChatRecyclerAdapte
         myHolder.cSender.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, PersonalProfile.class);
-                //here we need to send intent of the user id clicked to access the account.
-                v.getContext().startActivity(intent);
+                // Intent intent = new Intent(context, PersonalProfile.class);
+                // here we need to send intent of the user id clicked to access the account.
+                // v.getContext().startActivity(intent);
             }
         });
 
 
-        //I need once the user click if text is more than 5 line set the text view to wrap content; Applyin read more like in whatsApp.
+        //I need once the user click if text is more than 5 line set the text view to wrap content;
+        // Applying read more like in whatsApp.
 
 
     }

@@ -24,6 +24,7 @@ import com.pk.adapter.ThemeVerseAdapter;
 import com.pk.model.ThemeVerseModel;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class ThemeVerse extends Fragment {
     View view;
@@ -62,6 +63,7 @@ public class ThemeVerse extends Fragment {
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     themeVerseModelArrayList.add(snapshot.getValue(ThemeVerseModel.class));
                 }
+                Collections.reverse(themeVerseModelArrayList);
                 LinearLayoutManager manager = new LinearLayoutManager(getActivity());
                 manager.setOrientation(LinearLayoutManager.HORIZONTAL);
                 mRecyclerviewer.setLayoutManager(manager);

@@ -11,6 +11,7 @@
     <string name="communicate">Communicate</string>
     <string name="settings">Settings</string>
     <string name="dark_mode">Dark Mode</string>
+    <string name="log">Login</string>
     <string name="preferences">Preferences</string>
     <string name="cu_name">Pwani University CU</string>
     <string name="cu_mail">pwaniuniversitycu@gmail.com</string>
@@ -117,8 +118,9 @@
                         , considerate, submissive, full of mercy and good fruit, impartial and sincere.</string>
     <string name="email_address">Email Address</string>
     <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
     <string name="name">Full Name</string>
-    <string name="phone_number">Phone Number</string>
+    <string name="phone_number">Phone Number\(07…\)</string>
     <string name="register">Register</string>
     <string name="register_here">No account? Register here</string>
     <string name="enter_text_here">Enter Text here</string>
@@ -136,6 +138,8 @@
     <string name="save_or">Save the contact First to text Pwani Pwani University Christian Union in WhatsApp.</string>
     <string name="save">SAVE</string>
     <string name="call">Call</string>
+    <string name="prayer_sample">Thank you Lord God Almighty. Amen.</string>
+    <string name="register_activity"><b><u> Pwani CU Register</u></b></string>
     <string-array name="help_me">
         <item><b>Today</b>\n Developed for personal devotion. Each day, while online you can view
                                 a daily devotion to nourish your Spiritual Being.</item>

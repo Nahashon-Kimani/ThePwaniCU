@@ -10,13 +10,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.pk.R;
 import com.pk.model.SemProgramModel;
 
 import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Locale;
 
 public class SemProgramRecyclerAdapter extends RecyclerView.Adapter<SemProgramRecyclerAdapter.MyHolder> {
     String today;
@@ -42,8 +45,11 @@ public class SemProgramRecyclerAdapter extends RecyclerView.Adapter<SemProgramRe
         myHolder.date.setText(programList.get(i).getpDate());
 
         today = DateFormat.getDateInstance().format(new Date());
-        if (today.equals(programList.get(i).getpDate())) {
+        String date = new SimpleDateFormat("dd-MMM-yyyy", Locale.getDefault()).format(new Date());
+        if (date.equals(programList.get(i).getpDate())) {
             myHolder.programCard.setBackgroundResource(R.color.colorPrimary);
+            myHolder.desc.setTextColor(context.getResources().getColor(R.color.secondaryTextColor));
+            myHolder.desc.setTextSize(16);
         }
 
         myHolder.shareProgram.setOnClickListener(new View.OnClickListener() {
@@ -52,9 +58,11 @@ public class SemProgramRecyclerAdapter extends RecyclerView.Adapter<SemProgramRe
                 Intent intent = new Intent();
                 intent.setAction(Intent.ACTION_SEND)
                         .putExtra(Intent.EXTRA_TEXT,
-                                "On " + programList.get(i).getpDate()
-                                        + "Pwani CU will be hosting" + programList.get(i).getpTitle()
-                                        + ". Feel much welcome.");
+                                "Hello. On " + programList.get(i).getpDate()
+                                        + " Pwani University Christian Union will be hosting "
+                                        + programList.get(i).getpTitle()
+                                        + ". Feel much welcome.\n"
+                                        + "#PwaniUniversityChristianUnionApp");
                 intent.setType("text/plain");
                 v.getContext().startActivity(Intent.createChooser(intent, "Share " + programList.get(i).getpTitle()));
             }

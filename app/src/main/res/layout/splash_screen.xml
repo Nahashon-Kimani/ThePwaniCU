@@ -31,18 +31,32 @@
         android:textStyle="bold" />
 
     <TextView
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/splash_name"
         android:layout_marginTop="30dp"
+        android:fontFamily="cursive"
         android:gravity="center"
         android:text="@string/mission"
         android:textColor="@color/secondaryTextColor"
         android:textSize="17sp"
         android:textStyle="italic"
-        android:fontFamily="cursive"
         android:typeface="monospace" />
 
+    <ProgressBar
+        android:id="@+id/splash_deco"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="4dp"
+        android:backgroundTint="@color/secondaryTextColor"
+        android:visibility="gone"
+        android:indeterminate="true"
+        android:max="100"
+        android:progress="20"
+        android:theme="@style/LinearProgress" />
 
+    <!--android:indeterminate="true"-->
+    <!--style="?android:attr/progressBarStyleHorizontal"-->
 </RelativeLayout>
