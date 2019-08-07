@@ -14,7 +14,7 @@
     <string name="log">Login</string>
     <string name="preferences">Preferences</string>
     <string name="cu_name">Pwani University CU</string>
-    <string name="cu_mail">pwaniuniversitycu@gmail.com</string>
+    <string name="cu_mail">pucusecretary@gmail.com</string>
     <string name="drawer_open">Open Navigation Drawer</string>
     <string name="drawer_close">Close Navigation Drawer</string>
     <string name="share">Share App</string>
@@ -23,6 +23,8 @@
     <string name="tue">Tuesday</string>
     <string name="wed">Wednesday</string>
     <string name="thur">Thursday</string>
+    <string name="saf">SAFARICOM</string>
+    <string name="airtel">AIRTEL</string>
     <string name="fri">Friday</string>
     <string name="sat">Saturday</string>
     <string name="sun">Sunday</string>
@@ -43,20 +45,20 @@
         1. Morning Devotion from 5a.m GS1 \n
         2. Departmental Prayers. 1-2:00pm\n
         3. Evening Prayers at 5p.m. Behind Runda \n
-        4. Night Prayers at 8p.m. in GS1.
+        4. Class Fellowship at 8p.m. in GS1.
     </string>
     <string name="thur_program">
         1. Morning Devotion from 5a.m GS1 \n
-        2. Lunch Hour prayers at 1p.m. behind Runda \n
+        2. Family meetings at various venues within Campus at 1p.m.\n
         3. Evening Prayers at 5p.m. Behind Runda \n
         4. Night Prayers at 8p.m. in GS1.\n
-        5. Praise and Worship 8-10:00pm.
+        5. Praise and Worship Practices at 8-10:00pm in LTN Hall.
     </string>
     <string name="fri_program">
         1. Morning Devotion from 5a.m GS1 \n
-        2. Lunch Hour prayers at 1p.m. behind Runda \n
+        2. Family meetings at various venues within Campus at 1p.m.\n
         3. Evening Prayers at 5p.m. Behind Runda \n
-        4. Service 8:00pm- 10:00pm
+        4. Friday Service 8:00pm- 10:00pm
     </string>
     <string name="sat_program">
         1. Choir Practices 2:00pm-4:00p.m.\n
@@ -70,20 +72,29 @@
         4. Third service 11:00am - 1:00p.m.\n
         5. Intercessory Prayers at 5p.m. Behind Runda
     </string>
+
+    <!--textView.setText(Html.fromHtml(getString(R.string.some_text)));
+    and your strings.xml should contain the string as follows. about_cu_desc  -->
+
+    <string name="sample_text">
+    <![CDATA[<font color=\'#cc0029\'>Some</font>
+     random <font color=\'#ffcc00\'>text</font>]]></string>
+
     <string name="about_cu_desc">
-        The Pwani University Christian Union is a body bound by oe faith in God, the unity based
+        The Pwani University Christian Union is a body bound by one faith in God, the unity based
 		on common belief in the LORD JESUS as saviour and living as the Holy Scriptures say. The CU 
-		shall be entirely non-political and non-profit. 
-		Objectives\n
-		1. <b>Evangelism</b>\n To present JESUS CHRIST as Saviour, LORD and God to students in the 
-		University with purpose of leading them to a personal faith in Him.\n
+		is entirely non-political and non-profit.
+
+        \n\nObjectives\n
+		1.  <b>Evangelism</b> \n To present JESUS CHRIST as Saviour, LORD and God to students in the
+		University with purpose of leading them to a personal faith in Him.\n\n
 		2. <b>Discipleship</b> \n To deepen and strengthen spiritual life of students and equip them 
-		for a life time of Service in the family, church and society.\n
+		for a life time of Service in the family, church and society.\n\n
 		3. <b>Mission</b>\n To encourage and equip students to take the good news of Christ to every nation
 		on Earth and to be part of the church\'s witness to the good news, in order to be salt and Light
-		in the World.\n
+		in the World.\n\n
 		4. <b>Leadership Development</b>\n To develop Christian Leaders who will play key roles while 
-		in campus, in church and wider society.\n\n\n
+		in campus, in church and wider society.\n\n
 		
 		<b>STATEMENT OF FAITH</b>\n
 		1. The unity of the Father, Son and the Holy Spirit in God head.\n
@@ -111,7 +122,7 @@
     <string name="share_program">Share Program to Friends</string>
     <string name="program_name">Evangelism Weekend</string>
     <string name="event_date_sharing">21 April 2019 Sharing</string>
-    <string name="thought_of_day"><u> Thought of The Day</u></string>
+    <string name="thought_of_day"> Thought of The Day</string>
     <string name="prayer_of_the_day">Prayer of Day</string>
     <string name="special_announcement">Special Announcement</string>
     <string name="verse">But the wisdom that comes from heaven is first of all pure; then peace-loving
@@ -140,26 +151,40 @@
     <string name="call">Call</string>
     <string name="prayer_sample">Thank you Lord God Almighty. Amen.</string>
     <string name="register_activity"><b><u> Pwani CU Register</u></b></string>
+    <string name="theme_topic">Sober Living</string>
     <string-array name="help_me">
-        <item><b>Today</b>\n Developed for personal devotion. Each day, while online you can view
+        <item><b>Today</b>\n Developed for personal daily devotion. Each day, while online you can view
                                 a daily devotion to nourish your Spiritual Being.</item>
-        <item><b>Notices</b>\n Developed for personal devotion. Each day, while online you can view
-                                a daily devotion to nourish your Spiritual Being.</item>
-        <item><b>Semester Program</b>\n Developed for personal devotion. Each day, while online you can view
-                                a daily devotion to nourish your Spiritual Being. </item>
-        <item><b>About CU</b>\n Developed for personal devotion. Each day, while online you can view
-                                a daily devotion to nourish your Spiritual Being. </item>
-        <item><b>Theme Verse</b>\n Developed for personal devotion.Each day, while online you can view
-                                a daily devotion to nourish your Spiritual Being.</item>
-        <item><b>Bible Study Registration</b>\n Developed for personal devotion. Each day, while online you can view
-                                a daily devotion to nourish your Spiritual Being. </item>
-        <item><b>About CU</b>\n Developed for personal devotion. Each day, while online you can view
-                                a daily devotion to nourish your Spiritual Being. </item>
-        <item><b>Today</b>\n Developed for personal devotion. Each day, while online you can view
-                                a daily devotion to nourish your Spiritual Being. </item>
+
+        <item><b>Notices</b>\n Provides the current notices from the CU Desk to
+                                keep the members ever updated on the CU program. </item>
+
+        <item><b>Semester Program</b>\n Provides a detailed list of activities
+                                    organised by the CU for the whole semester.
+                                    Today activity will be highlighted in Blue.  </item>
+
+        <item><b>About CU</b>\n Displays the Vision, Mission and Statement of faith of the
+                                    Pwani University Christian Union as well as the objectives
+                                    of the Union. The Read More button at the bottom, when clicked,
+                                    allows you to access the CU Website directly. </item>
+
+        <item><b>Theme Verse</b>\n Provides the Theme Verses of the Current semester
+                                    as well as Theme verses of the past Years and Semester. </item>
+
+        <item><b>Bible Study Registration</b>\n Allows members to register Bible study
+                                Online from the link to the google form provided every semester.
+                                The form is then closed once the application time is over.
+                                Members are encouraged to register and register on time. </item>
+
+        <item><b>Social Media</b>\n Provides our Social Media Account and Phone numbers that
+                                can be used to communicate with us. </item>
+
+        <item><b>Forum</b>\n This screen provides a platform for members to engage each other,
+                                exchange ideas to the growth of us all spiritually.</item>
     </string-array>
     <string-array name="media_name">
-        <item>Telephone Number</item>
+        <item>Safaricom Number</item>
+        <item>Airtel Number</item>
         <item>Email</item>
         <item>FaceBook</item>
         <item>WhatsApp</item>
@@ -169,6 +194,7 @@
     </string-array>
     <string-array name="media_account">
         <item>0743304418</item>
+        <item>0753271113</item>
         <item>pucusecretary@gmail.com</item>
         <item>Official Pwani University CU</item>
         <item>0743304418</item>

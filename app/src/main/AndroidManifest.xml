@@ -30,8 +30,8 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".activity.RegisterActivity"
-            android:theme="@style/Theme.AppCompat.DayNight.Dialog"
-            android:label="@string/register_activity"/>
+            android:label="@string/register_activity"
+            android:theme="@style/Theme.AppCompat.DayNight.Dialog" />
         <activity
             android:name=".activity.LoginActivity"
             android:theme="@style/AppTheme.NoActionBar" />

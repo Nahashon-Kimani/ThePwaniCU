@@ -39,9 +39,10 @@
             android:id="@+id/t_narration"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
             android:fontFamily="casual"
             android:text="@string/verse"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:textStyle="bold|italic" />
 
         <TextView
@@ -49,6 +50,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/thought_of_day"
+            android:textAllCaps="true"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -58,18 +60,21 @@
             android:background="@color/colorAccent" />
 
 
-        <com.codesgood.views.JustifiedTextView
+        <TextView
             android:id="@+id/t_thought"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:gravity="center_vertical|start"
             android:lineSpacingExtra="4dp"
-            android:textSize="16sp" />
+            android:textSize="18sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/prayer_of_the_day"
+            android:textAllCaps="true"
             android:textSize="18sp"
             android:textStyle="bold" />
 

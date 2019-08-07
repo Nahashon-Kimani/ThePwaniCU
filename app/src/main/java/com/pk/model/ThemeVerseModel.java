@@ -1,17 +1,18 @@
 package com.pk.model;
 
 public class ThemeVerseModel {
-    String verse, narration, semester, year, version;
+    String verse, narration, semester, year, version, topic;
 
     public ThemeVerseModel() {
     }
 
-    public ThemeVerseModel(String verse, String narration, String semester, String year, String version) {
+    public ThemeVerseModel(String verse, String narration, String semester, String year, String version, String topic) {
         this.verse = verse;
         this.narration = narration;
         this.semester = semester;
         this.year = year;
         this.version = version;
+        this.topic = topic;
     }
 
     public String getVerse() {
@@ -52,5 +53,13 @@ public class ThemeVerseModel {
 
     public void setVersion(String version) {
         this.version = version;
+    }
+
+    public String getTopic() {
+        return topic;
+    }
+
+    public void setTopic(String topic) {
+        this.topic = topic;
     }
 }

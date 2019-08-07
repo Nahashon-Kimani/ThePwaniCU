@@ -31,7 +31,7 @@
             android:background="@color/primaryLightColor"
             android:hint="@string/enter_text_here"
             android:inputType="textCapSentences|textMultiLine"
-            android:maxLines="5"
+            android:maxLines="4"
             android:padding="10dp"
             android:textColor="@color/secondaryTextColor"
             android:textColorHint="@color/secondaryTextColor"

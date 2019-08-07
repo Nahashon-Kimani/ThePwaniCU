@@ -60,13 +60,19 @@ public class Forum extends AppCompatActivity {
         myUserId = mAuth.getUid();
 
 
-        populateRecyclerView();//This method populate recycler view
+        fSendMessage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendMessage();
+            }
+        });
 
-
+        //populateRecyclerView();//This method populate recycler view
         //Setting the Button disabled if no text detected.
-        fSendMessage.setEnabled(false);
+
+        //fSendMessage.setEnabled(false);
         //Here we need to activate send button once editText has something.
-        fTypeMessage.addTextChangedListener(new TextWatcher() {
+        /*fTypeMessage.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
                 if (s.toString().trim().length() == 0) {
@@ -75,32 +81,35 @@ public class Forum extends AppCompatActivity {
                     fSendMessage.setEnabled(true);
                     //fSendMessage.setBackgroundColor(Color.parseColor("#43A047"));//color Accent.
                     fSendMessage.setColorFilter(getResources().getColor(R.color.send_color));
+                    Toast.makeText(Forum.this, Integer.toString(count), Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
+                Toast.makeText(Forum.this, Integer.toString(count), Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void afterTextChanged(Editable s) {
-
+                fSendMessage.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        sendMessage();
+                    }
+                });
             }
-        });
+        });*/
 
 
-        fSendMessage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                sendMessage();
-            }
-        });
+
 
     }
 
     private void sendMessage() {
         String message = fTypeMessage.getText().toString().trim();
         String currentTime = DateFormat.getDateTimeInstance().format(new Date());
+        fSendMessage.setEnabled(true);
 
         if (message.isEmpty()) {
             fTypeMessage.setError("Message Cannot be empty.");

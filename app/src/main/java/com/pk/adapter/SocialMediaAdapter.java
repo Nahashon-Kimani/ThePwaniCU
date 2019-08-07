@@ -30,7 +30,7 @@ public class SocialMediaAdapter extends RecyclerView.Adapter<SocialMediaAdapter.
         this.context = context;
         name = context.getResources().getStringArray(R.array.media_name);
         account = context.getResources().getStringArray(R.array.media_account);
-        image = new int[]{R.drawable.dial, R.drawable.gmail, R.drawable.fb, R.drawable.whatsapp, R.drawable.twitter,
+        image = new int[]{R.drawable.safaricom, R.drawable.airtel, R.drawable.gmail, R.drawable.fb, R.drawable.whatsapp, R.drawable.twitter,
                 R.drawable.instagram, R.drawable.youtube};
 
     }
@@ -48,34 +48,44 @@ public class SocialMediaAdapter extends RecyclerView.Adapter<SocialMediaAdapter.
         myHolder.socialImage.setImageResource(image[position]);
         myHolder.socialAccount.setText(account[position]);
         myHolder.socialName.setText(name[position]);
+        myHolder.saf.setVisibility(View.GONE);
 
 
         switch (myHolder.getAdapterPosition()) {
             //This is dial
             case 0:
                 myHolder.socialView.setBackgroundResource(R.color.dial_color);
+                myHolder.saf.setVisibility(View.VISIBLE);
+                myHolder.saf.setText(context.getResources().getString(R.string.saf));
+                myHolder.saf.setBackgroundResource(R.color.dial_color);
                 break;
             //This is Facebook
             case 1:
                 myHolder.socialView.setBackgroundResource(R.color.youtube_color);
+                myHolder.saf.setVisibility(View.VISIBLE);
+                myHolder.saf.setText(context.getResources().getString(R.string.airtel));
+                myHolder.saf.setBackgroundResource(R.color.youtube_color);
                 break;
             case 2:
+                myHolder.socialView.setBackgroundResource(R.color.youtube_color);
+                break;
+            case 3:
                 myHolder.socialView.setBackgroundResource(R.color.fb_color);
                 break;
             //This is WhatsApp
-            case 3:
+            case 4:
                 myHolder.socialView.setBackgroundResource(R.color.whatsApp_color);
                 break;
             //This is Twitter
-            case 4:
+            case 5:
                 myHolder.socialView.setBackgroundResource(R.color.twitter_color);
                 break;
             //This is Instagram
-            case 5:
+            case 6:
                 myHolder.socialView.setBackgroundResource(R.color.instagram_color);
                 break;
             //This is Youtube
-            case 6:
+            case 7:
                 myHolder.socialView.setBackgroundResource(R.color.youtube_color);
                 break;
         }
@@ -117,7 +127,7 @@ public class SocialMediaAdapter extends RecyclerView.Adapter<SocialMediaAdapter.
                                         .putExtra(ContactsContract.Intents.Insert.EMAIL, context.getResources().getString(R.string.cu_mail))
                                         .putExtra(ContactsContract.Intents.Insert.EMAIL_TYPE, ContactsContract.CommonDataKinds.Email.TYPE_HOME)
                                         .putExtra(ContactsContract.Intents.Insert.PHONE, "0743304418")
-                                        .putExtra(ContactsContract.Intents.Insert.PHONE_TYPE, ContactsContract.CommonDataKinds.Phone.TYPE_MAIN)
+                                        .putExtra(ContactsContract.Intents.Insert.PHONE_TYPE, ContactsContract.CommonDataKinds.Phone.TYPE_HOME)
                                         .putExtra(ContactsContract.Intents.Insert.NAME, "Pwani University CU");
                                 v.getContext().startActivity(saveContact);
 
@@ -127,6 +137,47 @@ public class SocialMediaAdapter extends RecyclerView.Adapter<SocialMediaAdapter.
                         dialog.show();
                         break;
                     case 1:
+                        //dial
+                        final Dialog dialogA = new Dialog(context);
+                        dialogA.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                        dialogA.setContentView(R.layout.save_call_dialog);
+                        dialogA.setCancelable(true);
+
+                        Button dialA = dialogA.findViewById(R.id.dialog_dial);
+                        Button saveA = dialogA.findViewById(R.id.dialog_save);
+                        TextView messageA = dialogA.findViewById(R.id.dialog_message);
+
+                        messageA.setText(context.getResources().getString(R.string.save_call));
+
+                        dialA.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Intent dialContact = new Intent(Intent.ACTION_DIAL);
+                                dialContact.setData(Uri.parse("tel:0753271113"));
+                                v.getContext().startActivity(dialContact);
+                            }
+                        });
+
+                        saveA.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Intent saveContact = new Intent(ContactsContract.Intents.Insert.ACTION);
+                                saveContact.setType(ContactsContract.RawContacts.CONTENT_TYPE);
+
+                                saveContact
+                                        .putExtra(ContactsContract.Intents.Insert.EMAIL, context.getResources().getString(R.string.cu_mail))
+                                        .putExtra(ContactsContract.Intents.Insert.EMAIL_TYPE, ContactsContract.CommonDataKinds.Email.TYPE_HOME)
+                                        .putExtra(ContactsContract.Intents.Insert.PHONE, "0753271113")
+                                        .putExtra(ContactsContract.Intents.Insert.PHONE_TYPE, ContactsContract.CommonDataKinds.Phone.TYPE_HOME)
+                                        .putExtra(ContactsContract.Intents.Insert.NAME, "Pwani University CU");
+                                v.getContext().startActivity(saveContact);
+
+                            }
+                        });
+
+                        dialogA.show();
+                        break;
+                    case 2:
                         Intent gmail = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto",
                                 "pucusecretary@gmail.com", null));
                         gmail.putExtra(Intent.EXTRA_SUBJECT, "");
@@ -139,7 +190,7 @@ public class SocialMediaAdapter extends RecyclerView.Adapter<SocialMediaAdapter.
                         }
                         break;
 
-                    case 2:
+                    case 3:
                         //fb
                         Toast.makeText(context, "OPENING " + name[position] + " WEBSITE." +
                                 "\n Please search " + account[position], Toast.LENGTH_LONG).show();
@@ -147,7 +198,7 @@ public class SocialMediaAdapter extends RecyclerView.Adapter<SocialMediaAdapter.
 
                         break;
 
-                    case 3:
+                    case 4:
                         //WhatsApp
 
                         final Dialog whatsAPPDialog = new Dialog(context);
@@ -188,20 +239,20 @@ public class SocialMediaAdapter extends RecyclerView.Adapter<SocialMediaAdapter.
                         v.getContext().startActivity(whatsApp);*/
                         break;
 
-                    case 4:
+                    case 5:
                         //Twitter
-                        Toast.makeText(context, "OPENING" + name[position] + "WEBSITE." +
+                        Toast.makeText(context, "OPENING " + name[position] + "WEBSITE." +
                                 "\n Please search" + account[position], Toast.LENGTH_SHORT).show();
                         openSocialMediaSites("https://www.twitter.com");
                         break;
-                    case 5:
+                    case 6:
                         //Instagram
-                        Toast.makeText(context, "OPENING" + name[position] + "WEBSITE." +
+                        Toast.makeText(context, "OPENING " + name[position] + "WEBSITE." +
                                 "\n Please search" + account[position], Toast.LENGTH_SHORT).show();
                         openSocialMediaSites("https://www.instagram.com");
                         break;
-                    case 6:
-                        Toast.makeText(context, "OPENING" + name[position] + "WEBSITE." +
+                    case 7:
+                        Toast.makeText(context, "OPENING " + name[position] + "WEBSITE." +
                                 "\n Please search" + account[position], Toast.LENGTH_SHORT).show();
                         openSocialMediaSites("https://www.youtube.com/watch?v=cVHrkYbEgFM");
                         break;
@@ -222,7 +273,7 @@ public class SocialMediaAdapter extends RecyclerView.Adapter<SocialMediaAdapter.
     }
 
     class MyHolder extends RecyclerView.ViewHolder {
-        TextView socialName, socialAccount;
+        TextView socialName, socialAccount, saf;
         ImageView socialImage;
         CardView socialCard;
         View socialView;
@@ -234,6 +285,7 @@ public class SocialMediaAdapter extends RecyclerView.Adapter<SocialMediaAdapter.
             socialImage = itemView.findViewById(R.id.social_image);
             socialCard = itemView.findViewById(R.id.social_card);
             socialView = itemView.findViewById(R.id.social_view);
+            saf = itemView.findViewById(R.id.saf);
         }
     }
 }

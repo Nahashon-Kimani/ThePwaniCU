@@ -23,7 +23,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.pk.activity.Forum;
 import com.pk.adapter.BottomSheetDialog;
 import com.pk.drawerFragment.AboutCU;
 import com.pk.drawerFragment.BsRegistration;
@@ -57,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         specialNotice.setSelected(true);
 
+        mDatabase = FirebaseDatabase.getInstance();
         mRef = FirebaseDatabase.getInstance().getReference().child("New").child("Special Notice");
         /*mRef.setValue("This is a special Notice");*/
 
@@ -136,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new BsRegistration()).commit();
                         break;
                     case R.id.drawer_forum:
-                        startActivity(new Intent(MainActivity.this, Forum.class));
+                        //startActivity(new Intent(MainActivity.this, Forum.class));
                         break;
                     case R.id.drawer_night_mode:
                         Toast.makeText(MainActivity.this, "Under Development", Toast.LENGTH_SHORT).show();

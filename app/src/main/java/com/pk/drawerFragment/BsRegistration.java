@@ -124,7 +124,7 @@ public class BsRegistration extends Fragment {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
-                getFragmentManager().beginTransaction().replace(R.id.fragment_container, new Home()).commit();
+                //getFragmentManager().beginTransaction().replace(R.id.fragment_container, new Home()).commit();
                 /*Intent intent = new Intent(getContext(), MainActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);*/

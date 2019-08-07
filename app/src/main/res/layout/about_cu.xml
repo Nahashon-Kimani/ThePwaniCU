@@ -58,7 +58,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <com.codesgood.views.JustifiedTextView
+            <TextView
                 android:id="@+id/about_cu_text_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -72,7 +72,6 @@
                 android:lineSpacingExtra="4dp"
                 android:maxLines="32"
                 android:padding="4dp"
-                android:text="@string/about_cu_desc"
                 android:textSize="18sp" />
 
             <Button

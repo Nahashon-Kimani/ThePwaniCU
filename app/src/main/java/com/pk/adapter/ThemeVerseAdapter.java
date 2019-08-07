@@ -36,6 +36,7 @@ public class ThemeVerseAdapter extends RecyclerView.Adapter<ThemeVerseAdapter.My
         myHolder.themeSemName.setText(themeList.get(i).getSemester());
         myHolder.themeYear.setText(themeList.get(i).getYear());
         myHolder.themeVersion.setText(themeList.get(i).getVersion());
+        myHolder.themeTopic.setText(themeList.get(i).getTopic());
     }
 
     @Override
@@ -45,7 +46,7 @@ public class ThemeVerseAdapter extends RecyclerView.Adapter<ThemeVerseAdapter.My
 
 
     class MyHolder extends RecyclerView.ViewHolder {
-        TextView themeVerse, themeNarration, themeSemName, themeYear, themeVersion;
+        TextView themeVerse, themeNarration, themeSemName, themeYear, themeVersion, themeTopic;
 
         public MyHolder(@NonNull View itemView) {
             super(itemView);
@@ -54,6 +55,7 @@ public class ThemeVerseAdapter extends RecyclerView.Adapter<ThemeVerseAdapter.My
             themeSemName = itemView.findViewById(R.id.theme_sem_name);
             themeYear = itemView.findViewById(R.id.theme_year);
             themeVersion = itemView.findViewById(R.id.theme_version);
+            themeTopic = itemView.findViewById(R.id.theme_topic);
 
         }
     }

@@ -58,7 +58,8 @@ public class SemProgramRecyclerAdapter extends RecyclerView.Adapter<SemProgramRe
                 Intent intent = new Intent();
                 intent.setAction(Intent.ACTION_SEND)
                         .putExtra(Intent.EXTRA_TEXT,
-                                "Hello. On " + programList.get(i).getpDate()
+                                "Praise the LORD\n. "
+                                        + "On " + programList.get(i).getpDate()
                                         + " Pwani University Christian Union will be hosting "
                                         + programList.get(i).getpTitle()
                                         + ". Feel much welcome.\n"

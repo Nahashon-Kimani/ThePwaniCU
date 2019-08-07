@@ -3,6 +3,7 @@ package com.pk.adapter;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,7 +37,8 @@ public class TodayRecyclerAdapter extends RecyclerView.Adapter<TodayRecyclerAdap
         myHolder.narration.setText(todaySermonList.get(i).gettVerseNarration());
         myHolder.thought.setText(todaySermonList.get(i).gettThoughtOfDay());
         myHolder.prayer.setText(todaySermonList.get(i).gettPrayerOfDay());
-        
+
+        //myHolder.thought.setJustificationMode(Layout.JUSTIFICATION_MODE_INTER_WORD);
         //myHolder.prayer.setMovementMethod(new ScrollingMovementMethod());
 
     }
