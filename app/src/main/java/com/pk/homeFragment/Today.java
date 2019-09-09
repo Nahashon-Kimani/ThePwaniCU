@@ -41,6 +41,7 @@ public class Today extends Fragment {
         //Database INIT
         mDatabase = FirebaseDatabase.getInstance();
         mRef = mDatabase.getReference().child("New").child("Today Sermon");
+        mRef.keepSynced(true);
 
         //String eventInputDate = DateFormat.getDateTimeInstance().format(new Date());
 

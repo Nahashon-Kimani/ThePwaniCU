@@ -32,45 +32,47 @@
         1. Morning Devotion from 5a.m GS1 \n
         2. Lunch Hour prayers at 1p.m. behind Runda \n
         3. Evening Prayers at 5p.m. Behind Runda \n
-        4. Night Prayers at 8p.m. in GS1.
+        4. Night Prayers at 8p.m. in GS1.\n
     </string>
     <string name="tue_program">
         1. Morning Devotion from 5a.m GS1 \n
         2. Lunch Hour prayers at 1p.m. behind Runda \n
         3. Evening Prayers at 5p.m. Behind Runda \n
-        4. Night Prayers at 8p.m. in GS1.\n
-        5. Best P Classes at GS1 8-9:00pm
+        4. Best P Classes at GS1 8-9:00pm\n
     </string>
     <string name="wed_program">
         1. Morning Devotion from 5a.m GS1 \n
         2. Departmental Prayers. 1-2:00pm\n
         3. Evening Prayers at 5p.m. Behind Runda \n
-        4. Class Fellowship at 8p.m. in GS1.
+        4. Class Fellowship at 8p.m. in GS1\n
+        5. Brothers and Sister Fellowship after 2 Weeks.\n
     </string>
     <string name="thur_program">
         1. Morning Devotion from 5a.m GS1 \n
         2. Family meetings at various venues within Campus at 1p.m.\n
         3. Evening Prayers at 5p.m. Behind Runda \n
         4. Night Prayers at 8p.m. in GS1.\n
-        5. Praise and Worship Practices at 8-10:00pm in LTN Hall.
+        5. Praise and Worship Practices at 8-10:00pm in LTN Hall.\n
     </string>
     <string name="fri_program">
         1. Morning Devotion from 5a.m GS1 \n
         2. Family meetings at various venues within Campus at 1p.m.\n
         3. Evening Prayers at 5p.m. Behind Runda \n
-        4. Friday Service 8:00pm- 10:00pm
+        4. Friday Service 8:00pm- 10:00pm\n
     </string>
     <string name="sat_program">
         1. Choir Practices 2:00pm-4:00p.m.\n
-        2. Praise and Worship 4:00p.m - 6:00pm.\n
-        3. Bible Study 8pm - 9:00pm
+        2. IT Department Meeting at Botanical Garden from 2-4:00pm\n
+        3. Praise and Worship 4:00p.m - 6:00pm.\n
+        4. Ushering Department Meeting at 5:00pm - 6:00pm at EL.\n
+        5. Bible Study 8pm - 9:00pm.\n
     </string>
     <string name="sun_program">
         1. Morning Devotion from 5:30a.m-6:30 LTN \n
         2. First Service 6:30a.m - 8:45a.m.\n
         3. Second Service 8:45 a.m. - 10:45am\n
         4. Third service 11:00am - 1:00p.m.\n
-        5. Intercessory Prayers at 5p.m. Behind Runda
+        5. Intercessory Prayers at 5p.m. Behind Runda\n
     </string>
 
     <!--textView.setText(Html.fromHtml(getString(R.string.some_text)));
@@ -80,31 +82,63 @@
     <![CDATA[<font color=\'#cc0029\'>Some</font>
      random <font color=\'#ffcc00\'>text</font>]]></string>
 
-    <string name="about_cu_desc">
-        The Pwani University Christian Union is a body bound by one faith in God, the unity based
-		on common belief in the LORD JESUS as saviour and living as the Holy Scriptures say. The CU 
-		is entirely non-political and non-profit.
+    <string name="share_about_cu">
+        The Pwani University Christian Union is a body bound by one faith in God,
+        the unity based on a common belief in the LORD JESUS as Saviour and living
+        as the Holy Scriptures say. The CU is entirely non-political and non-profit.\n\n
 
-        \n\nObjectives\n
-		1.  <b>Evangelism</b> \n To present JESUS CHRIST as Saviour, LORD and God to students in the
-		University with purpose of leading them to a personal faith in Him.\n\n
-		2. <b>Discipleship</b> \n To deepen and strengthen spiritual life of students and equip them 
-		for a life time of Service in the family, church and society.\n\n
-		3. <b>Mission</b>\n To encourage and equip students to take the good news of Christ to every nation
-		on Earth and to be part of the church\'s witness to the good news, in order to be salt and Light
-		in the World.\n\n
-		4. <b>Leadership Development</b>\n To develop Christian Leaders who will play key roles while 
-		in campus, in church and wider society.\n\n
-		
-		<b>STATEMENT OF FAITH</b>\n
-		1. The unity of the Father, Son and the Holy Spirit in God head.\n
-		2. The Sovereignty of God in Creation, revolution, redemption and final judgement. \n
-		3. The divined inspiration and entire trustworthiness of Holy Scripture, as originally
-		given and its supreme authority in all matters of faith and conduct.\n
-		4. The universal sinfulness and guilty of all men since  the fall, rendering them subject
-		to God\'s wrath and condemnation.\n
-		5. Redemption from the guilt, penalty, dominion and pollution of solely through the sacrificial death
-		\(Our Representative and substitution\) of the; LORD JESUS from the dead and His ascension to the right hand
+             Objectives\n
+        1.  <b>Evangelism\n</b>
+            To present JESUS CHRIST as Saviour, LORD and God to students in
+            the University to lead them to personal faith in Him.\n\n
+
+        2. <b>Discipleship\n</b>
+            To deepen and strengthen the spiritual life of students and equip
+            them for a lifetime of service in the family, church and society.\n\n
+
+        3. <b>Mission\n</b>
+            To encourage and equip students to take the good news of Christ to every
+            nation on Earth and to be part of the church\'s witness to the good news,
+            to be salt and Light in the World.\n\n
+
+        4. <b>Leadership Development\n</b>
+            To develop Christian leaders who will play key roles while on-campus,
+            in church and wider society.\n\n
+    </string>
+
+    <string name="about_cu_desc">
+        The Pwani University Christian Union is a body bound by one faith in God,
+        the unity based on a common belief in the LORD JESUS as Saviour and living
+        as the Holy Scriptures say. The CU is entirely non-political and non-profit.\n\n
+
+             Objectives\n
+        1.  <b>Evangelism\n</b>
+            To present JESUS CHRIST as Saviour, LORD and God to students in
+            the University to lead them to personal faith in Him.\n\n
+
+        2. <b>Discipleship\n</b>
+            To deepen and strengthen the spiritual life of students and equip
+            them for a lifetime of service in the family, church and society.\n\n
+
+        3. <b>Mission\n</b>
+            To encourage and equip students to take the good news of Christ to every
+            nation on Earth and to be part of the church\'s witness to the good news,
+            to be salt and Light in the World.\n\n
+
+        4. <b>Leadership Development\n</b>
+            To develop Christian leaders who will play key roles while on-campus,
+            in church and wider society.\n\n
+
+        <b>STATEMENT OF FAITH\n</b>
+        1. The unity of the Father, Son and the Holy Spirit in God\'s head.\n
+        2. The Sovereignty of God in Creation, revolution, redemption and final judgement. \n
+        3. The divined inspiration and entire trustworthiness of Holy Scripture, as originally
+        given and its supreme authority in all matters of faith and conduct.\n
+        4. The universal sinfulness and guilt of all men since the Fall, rendering them subject
+        to God\'s wrath and condemnation.\n
+        5. Redemption from the guilt, penalty, dominion and pollution of solely through the sacrificial death
+        \(Our Representative and substitution\) of the; LORD JESUS from the dead and His ascension to the right hand.\n\n
+
 </string>
     <string name="read_more">Read More…</string>
     <string name="previous">Previous</string>
@@ -199,7 +233,7 @@
         <item>Official Pwani University CU</item>
         <item>0743304418</item>
         <item>\@pwanicu</item>
-        <item>Official Pwani University CU</item>
+        <item>\@pwanicu</item>
         <item>Pwani University Christian Union</item>
     </string-array>
 </resources>

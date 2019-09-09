@@ -17,4 +17,5 @@
     <color name="fb_color">#0000FF</color>
     <color name="instagram_color">#DDFFAB40</color>
     <color name="youtube_color">#FF3B29</color>
+    <color name="gray_color">#D3D3D3</color>
 </resources>

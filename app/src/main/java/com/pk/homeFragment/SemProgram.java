@@ -41,6 +41,7 @@ public class SemProgram extends Fragment {
         //Database INIT
         mDatabase = FirebaseDatabase.getInstance();
         mRef = mDatabase.getReference().child("New").child("Semester Program");
+        mRef.keepSynced(true);
 
         //String eventInputDate = DateFormat.getDateTimeInstance().format(new Date());
 

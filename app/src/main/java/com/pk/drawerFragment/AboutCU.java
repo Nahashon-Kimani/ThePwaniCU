@@ -60,7 +60,7 @@ public class AboutCU extends Fragment {
 
     public void shareAboutCU() {
         Intent sendIntent = new Intent(Intent.ACTION_SEND);
-        sendIntent.putExtra(Intent.EXTRA_TEXT, getResources().getString(R.string.app_name));
+        sendIntent.putExtra(Intent.EXTRA_TEXT, getResources().getString(R.string.share_about_cu));
         sendIntent.setType("text/plain");
         startActivity(Intent.createChooser(sendIntent, "Share About Pwani Cu"));
     }

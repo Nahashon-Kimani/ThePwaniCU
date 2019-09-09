@@ -46,6 +46,7 @@ public class Notices extends Fragment {
         //Database init
         mDatabase = FirebaseDatabase.getInstance();
         mRef = mDatabase.getReference().child("New").child("Notice");
+        mRef.keepSynced(true);
 
         mRef.addValueEventListener(new ValueEventListener() {
             @Override

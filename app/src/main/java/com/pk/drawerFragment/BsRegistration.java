@@ -71,7 +71,7 @@ public class BsRegistration extends Fragment {
         });*/
 
 
-        webView.loadUrl("https://goo.gl/forms/ZUwIHCMEFqGed2ys1");
+        webView.loadUrl("https://docs.google.com/forms/d/e/1FAIpQLSfh7oia9kBKc1ci-l3vc-bKh5iEyQBRhljMu_r6DgwSYxMM5g/viewform?usp=sf_link");
         return view;
     }
 
